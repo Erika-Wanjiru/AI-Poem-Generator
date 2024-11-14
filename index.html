@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>AI Poem Generator</title>
   </head>
   <body>
@@ -13,21 +14,24 @@
         <h1>My AI Poem Generator</h1>
       </header>
       <main>
-        <form id="poem-generator-form">
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Enter the topic of the oem"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-          />
-          <input type="Submit" class="submit-button" />
-        </form>
-        <div class="poem" id="poem"></div>
+        <div class="form-container">
+          <form id="poem-generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic of a French poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Love, Life or Food</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
       </main>
+
       <footer>
         This AI project was coded by
         <a href="https://github.com/Erika-Wanjiru" target="_blank"
